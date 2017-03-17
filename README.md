@@ -1,5 +1,20 @@
 # generator-sss [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Super Static Site Generator
+> Super Simple Site Generator 
+
+This is for quick static site projects built in Yeoman. It produces just an `index.html`, a CSS, and JS file. 
+
+## What's Generated:
+
+Just a simple enough site structure to get going immediately: 
+```
+index.html
+css/
+    main.css
+js/
+    main.js
+```
+
+It has [Skeleton](http://www.getskeleton.com) built in so that quick scaffolding can happen.
 
 ## Installation
 
@@ -15,13 +30,6 @@ Then generate your new project:
 ```bash
 yo sss
 ```
-
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
 ## License
 
