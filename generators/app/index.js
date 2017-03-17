@@ -7,14 +7,13 @@ module.exports = Generator.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the impeccable ' + chalk.red('generator-sss') + ' generator!'
+      'Let\'s build a simple site with the ' + chalk.red('generator-sss') + ' generator!'
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
+      name: 'siteName',
+      message: `What is your site's name?`,
+      default: this.appName
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -24,13 +23,20 @@ module.exports = Generator.extend({
   },
 
   writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+    this.fs.copyTpl(
+      this.templatePath(''),
+      this.destinationPath(this.props.siteName),
+      {
+        siteName: this.props.siteName
+      }
     );
+  },
+
+  end: function() {
+    console.log(chalk.red('All done!'));
   },
 
   install: function () {
     this.installDependencies();
-  }
+  },
 });
