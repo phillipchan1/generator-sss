@@ -1,11 +1,11 @@
 # generator-sss [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Super Simple Site Generator 
+> Super Simple Site Generator
 
-This is for quick static site projects built in Yeoman. It produces just an `index.html`, a CSS, and JS file. 
+This is for quick static site projects built in Yeoman. It produces just an `index.html`, a CSS, and JS file.
 
 ## What's Generated:
 
-Just a simple enough site structure to get going immediately: 
+Just a simple enough site structure to get going immediately:
 ```
 index.html
 css/
@@ -14,7 +14,9 @@ js/
     main.js
 ```
 
-It has [Skeleton](http://www.getskeleton.com) built in so that quick scaffolding can happen.
+Some niceties:
+- Run `gulp` for live reload server
+- It has [Skeleton](http://www.getskeleton.com) built in so that quick scaffolding can happen.
 
 ## Installation
 
@@ -23,6 +25,12 @@ First, install [Yeoman](http://yeoman.io) and generator-sss using [npm](https://
 ```bash
 npm install -g yo
 npm install -g generator-sss
+```
+
+Go into project folder and run
+
+```
+npm install
 ```
 
 Then generate your new project:
