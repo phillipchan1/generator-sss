@@ -34,9 +34,11 @@ module.exports = Generator.extend({
 
   end: function() {
     console.log(chalk.red('All done!'));
+    this.npmInstall();
   },
 
   install: function () {
     this.installDependencies();
+
   },
 });
